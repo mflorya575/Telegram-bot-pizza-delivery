@@ -5,7 +5,10 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 
 from dotenv import find_dotenv, load_dotenv
+
 load_dotenv(find_dotenv())
+
+from middlewares.db import CounterMiddleware
 
 from handlers.user_private import user_private_router
 from handlers.user_group import user_group_router
